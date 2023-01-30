@@ -1,0 +1,3 @@
+<?php
+$MIN_PRICE_PEER_KM = 1;
+$MAX_PRICE_PEER_KM = 50;
