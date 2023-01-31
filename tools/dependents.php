@@ -6,6 +6,3 @@ require_once "./tools/health.php";
 require_once "./tools/filemanager.php";
 require_once "./php_interface/init.php";
 
-use \Passing\DBHandler\Connect;
-
-Connect::query("SELECT * FROM users");

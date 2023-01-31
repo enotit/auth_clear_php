@@ -1,5 +1,6 @@
 {
-  "hostname": "localhost",
-  "username": "root",
-  "password": "root"
+  "hostname": "hostname",
+  "username": "username",
+  "password": "password",
+  "table": "table"
 }

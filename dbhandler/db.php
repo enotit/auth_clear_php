@@ -18,10 +18,12 @@ class Connect
         $conf = json_decode($conf_json, true);
 
         static::$db = mysqli_connect($conf["hostname"], $conf["username"], $conf["password"]);
-        mysqli_select_db(static::$db, "passing");
+		if (!static::$db){
+			Health::setStatus(false);
+		}
+        mysqli_select_db(static::$db, $conf["table"]);
 
         $create_table_file = FileManager::readFile("dbhandler/create_table.sql");
-
         if (!static::$db->query($create_table_file))
             Health::setStatus(false);
     }

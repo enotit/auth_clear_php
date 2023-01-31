@@ -20,7 +20,6 @@ class User
      * @param bool $isDriver
      * or nothing
      */
-    /*
     public function __construct(){
         $args = func_get_args();
         if (count($args) === 3){
@@ -32,7 +31,7 @@ class User
             $this->session = false;
             $this->isDriver = false;
         }
-    } */
+    }
 
     public function init(){
 
