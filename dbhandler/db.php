@@ -35,6 +35,14 @@ class Connect
             static::init();
 
         static::$db->query($request);
-
     }
+
+	public static function read(string $request)
+	{
+		if (!static::$db)
+			static::init();
+
+		var_dump(get_class_methods(static::$db));
+	}
+
 }

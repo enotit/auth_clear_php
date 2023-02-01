@@ -5,11 +5,13 @@ xhr.send();
 function getpopupform(code)
 {
 	const popup=document.getElementById("popup");
-	if (!popup)
-	return '<div class="popup" id="popup">' +
-		'<a class="close" href="#" onclick="closepopup()"> X </a>' +
-		'<br>' + code +
-		'</div>'
+	if (!popup) {
+		document.body.style.overflow = 'hidden';
+		return '<div class="popup" id="popup">' +
+			'<a class="close" href="#" onclick="closepopup()"> X </a>' +
+			'<br>' + code +
+			'</div>'
+	}
 }
 
 
@@ -24,4 +26,5 @@ function signin(e) {
 function closepopup(){
 	const popup=document.getElementById("popup");
 	popup.remove();
+	document.body.style.overflow = '';
 }
