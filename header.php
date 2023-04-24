@@ -7,12 +7,19 @@
  */
 namespace Passing;
 require "./tools/dependents.php";
+$phrases = [
+	'Hi',
+	'Хорошего времени суток',
+	'Добро пожаловать',
+	'Успехов'
+];
+
 ?>
 <head>
     <head>
-        <style>
-        </style>
-        <title> Today: <?= date("H:i:s") ?> </title>
+		
+        <title> Попутка </title>
+		<link type="Image/x-icon" href="/sources/duck.ico" rel="icon">
         <link href="styles\style.css" rel="stylesheet" type="text/css">
     </head>
 </head>
@@ -21,16 +28,18 @@ require "./tools/dependents.php";
     <div class="header_block">
         <div class="head_container">
             <div class="center_header_block header_part">
-                <a href="./"> ПопУтка </a>
+                <a href="#auth" onclick="signin()"> ПопУтка </a>
             </div>
             <div class="right_header_block header_part">
                 <?php if (true): ?>
-                    <a href='./auth'> Войти </a>
+                    <a href='#auth' onclick="signin()"> Войти </a>
                 <?php else: ?>
-                    <b>Добро пожаловать, </b> <?= $USER->getName() ?>!
+                    <b><?= $phrases[array_rand($phrases)] ; ?>, </b><?= $USER->getName() ?>!
                 <?php endif; ?>
             </div>
         </div>
     </div>
 </header>
+
 <div style="padding: 5vh"></div>
+<script src="auth.js"> </script>

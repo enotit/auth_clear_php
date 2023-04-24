@@ -16,7 +16,7 @@ body {
 
 .header_block {
     position: absolute;
-    width: 100vw;
+    width: 99.23vw;
     height: 10vh;
     background-color: darkcyan;
     margin: 0;
@@ -77,12 +77,29 @@ a {
     background-color: white;
     padding: 2vh 2vw 2vh 2vw;
     border-radius: 13px 13px 13px 13px;
-
+    word-break: break-word;
     filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, .5));
     opacity: 0;
     transition: opacity 1s ease;
 }
 
+.popup {
+    margin: 48vh 48vw;
+    -webkit-box-shadow: 0 5px 36px 12px rgba(34, 60, 80, 0.2);
+    box-shadow: rgba(0,0,0,.5) 0 0 0 1000px;
+    background-color: white;
+    padding: 2vh 2vw 2vh 2vw;
+    border-radius: 13px 13px 13px 13px;
+    filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, .5));
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+}
+
+.popup .close {
+    color: black;
+    float: right;
+}
 
 .whoareyou {
     display: flex;
@@ -135,4 +152,8 @@ a {
 
 .hidden {
     opacity: 0;
+}
+
+.center_header_block a {
+
 }
