@@ -27,7 +27,7 @@
                 <b id="salary"> </b>р. с 2х пассажиров
                 </p>
             </div>
-        </td>
+        </td>1
         <td style="width: 50%">
             <div class="right-passanger" id="right_passanger">
                 Тебя кинут на деньги, идиот
